@@ -75,46 +75,87 @@ The model was trained and validated on publicly available pneumonia datasets:
 
 ## 🏗️ Installation and Setup
 
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/<your-username>/pneumonia-detection.git
+## 1️⃣ Clone the Repository
+
+Open a terminal and run:
+
+git clone <your-repo-url>
 cd pneumonia-detection
+Replace <your-repo-url> with the actual GitHub URL of your repository.
 
-2️⃣  **Create and Activate Virtual Environment**
+## 2️⃣ Create and Activate Virtual Environment
 
-```bash
+Create a virtual environment to manage dependencies:
+
+# For Linux / macOS
 python -m venv venv
-# For Linux/Mac
 source venv/bin/activate
+
 # For Windows
+python -m venv venv
 venv\Scripts\activate
+You should see your terminal prompt change to indicate that the virtual environment is active.
 
-3️⃣ Install Dependencies
+3️⃣ Install Required Packages
+
+## Install all dependencies listed in requirements.txt:
+
 pip install -r requirements.txt
+If you don’t have a requirements.txt, create one by running:
 
-🚀 Training the Model
+pip freeze > requirements.txt
 
-To train the model, run:
+## 4️⃣ Prepare the Dataset
+ Place your dataset in the chest_xray folder. The folder structure should look like this:
+
+chest_xray/
+    train/
+    test/
+    val/
+Make sure your dataset is structured according to the expected training/testing split.
+
+## 5️⃣ Run the Training Script
+Train the model by running:
 
 python train_model.py
 
+This will:
+Load the dataset from chest_xray/
 
-To tune hyperparameters with Optuna:
+Apply augmentations from augmentations.py
 
-python optuna_tuner.py
+Train the model and save the best checkpoint (e.g., pneumonia_model.pth or best_model_optuna.pth)
 
+## 6️⃣ Evaluate the Model
 
-To evaluate the model:
+After training, evaluate the model using:
 
 python evaluate_model.py
 
 
-Grad-CAM++ Visualization Example:
+This will generate metrics and confusion matrices for your model.
 
-Visual heatmaps highlighting pneumonia-infected lung regions are stored under
-result of gradcam/ directory.
+## 7️⃣ Hyperparameter Tuning
 
-🧩 Model Explainability (Grad-CAM++)
+If you want to perform hyperparameter optimization, run:
+
+python optuna_tuner.py
+
+## 8️⃣ View Grad-CAM Results
+
+Visualize model attention using Grad-CAM:
+
+python gradcam_plus_plus.py
+
+
+Results will be saved in the result of gradcam folder.
+
+## 9️⃣ Notes
+
+Make sure torch is installed with CUDA support if you want GPU acceleration.
+
+Use the pretrained models (pneumonia_model.pth, best_model_optuna.pth) for inference without retraining.
+## 🧩 Model Explainability (Grad-CAM++)
 
 Grad-CAM++ provides visual explanations for model predictions, helping to validate that the network focuses on the correct lung regions for pneumonia detection.
 
@@ -122,7 +163,7 @@ Example output:
 
 Grad-CAM++ → Highlights infected lung regions → Improves model transparency.
 
-🧪 Technologies Used
+## 🧪 Technologies Used
 Category	Tools / Libraries
 Framework	PyTorch
 Model	EfficientNet-B0

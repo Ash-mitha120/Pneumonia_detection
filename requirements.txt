@@ -1,0 +1,33 @@
+# Core Deep Learning Framework
+torch
+torchvision
+
+# Model Architecture
+efficientnet-pytorch
+
+# Data Augmentation
+albumentations
+
+# Image Processing
+opencv-python
+Pillow
+
+# Scientific Computing
+numpy
+
+# Machine Learning Utilities
+scikit-learn
+
+# Visualization
+matplotlib
+seaborn
+tensorboard
+
+# Hyperparameter Optimization
+optuna
+
+# Model Interpretability
+grad-cam
+
+# Progress Bars (optional but commonly used)
+tqdm

@@ -1,0 +1,144 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+/venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Dataset files (large files)
+data/
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.pth
+*.pt
+*.pkl
+*.pickle
+
+# Logs and outputs
+logs/
+*.log
+runs/
+
+# Checkpoints
+*.pth
+*.pth.tar
+*.pt
+*.bin
+
+# Environment variables
+.env
+
+# Local development settings
+local_settings.py
+
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Training data and models (large files)
+*.pth
+*.pt
+*.h5
+*.hdf5
+*.npy
+*.npz
+
+# Logs and outputs
+logs/
+*.log
+runs/
+
+# Dataset directories
+data/
+chest_xray/
+
+# Checkpoints
+checkpoints/
+*.pth
+*.pt
+*.pth.tar
+
+# Environment variables
+.env
+
+# Local development
+local_settings.py
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
